@@ -1,12 +1,18 @@
 package br.eng.andreduarte.dispring;
 
+import br.eng.andreduarte.dispring.controllers.MyController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 
 @SpringBootApplication
 public class DiSpringApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DiSpringApplication.class, args);
+		ApplicationContext ctx = SpringApplication.run(DiSpringApplication.class, args);
+
+		MyController controller = (MyController) ctx.getBean("myController");
+
+		controller.hello();
 	}
 }
