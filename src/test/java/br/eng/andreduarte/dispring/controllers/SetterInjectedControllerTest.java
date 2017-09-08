@@ -9,6 +9,7 @@ import static org.junit.Assert.assertEquals;
 /**
  * Created by Andre on 9/8/17.
  */
+
 public class SetterInjectedControllerTest {
 
     private SetterInjectedController setterInjectedController;
